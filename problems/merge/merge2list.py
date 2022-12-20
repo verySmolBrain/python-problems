@@ -1,5 +1,5 @@
 from typing import Optional
-from ds import ListNode
+from problems.ds import ListNode
 
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:

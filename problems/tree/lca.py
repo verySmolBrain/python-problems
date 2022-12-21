@@ -13,3 +13,4 @@ def run():
     root = TreeNode.bfs_create([6,2,8,0,4,7,9,None,None,3,5])
     a = lowestCommonAncestor(root, root.left, root.left.right)
     print(a.val)
+    

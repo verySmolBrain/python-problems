@@ -1,3 +1,3 @@
-from tree.lca import run
+from list.cycle import run
 
 run()

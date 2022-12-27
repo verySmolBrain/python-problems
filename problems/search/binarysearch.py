@@ -1,7 +1,7 @@
 from typing import List
 
 def search(nums: List[int], target: int) -> int:
-    left, right = 0, len(nums) - 1
+    left, right = 0, len(nums)
     
     while left <= right:
         mid = (left + right) // 2
@@ -15,6 +15,6 @@ def search(nums: List[int], target: int) -> int:
     
     return -1
 
-a = search([1, 2, 3, 4, 5], 4)
+a = search([1, 2, 3, 4, 5], 2)
 
 print(a)

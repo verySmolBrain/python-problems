@@ -24,3 +24,25 @@ class Solution:
         ans = max(-(2 ** 31), ans)
         
         return ans
+
+class Solution:
+    def myAtoi(self, s: str) -> int:
+        ans, sign = 0, 1
+        symbols = {
+            "-": -1,
+            "+": 1
+        }
+
+        left = 0    
+        while left < len(s) and s[left] == " ":
+            left += 1
+
+        if left < len(s) and s[left] in symbols:
+            sign = symbols[s[left]]
+            left += 1
+            
+        while left < len(s) and s[left].isdigit():
+            ans = (ans * 10) + int(s[left])
+            left += 1
+                 
+        return max(-(2 ** 31), min(2 ** 31 - 1, ans * sign))
